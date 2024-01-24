@@ -22,6 +22,19 @@ Command line Chatrooms relies on three main data models. User represents a user,
 
 ## Models
 
+| User | |
+|---------------------|-------------------------|
+| **Name** _string_ | **Password** _string_ |
+
+| Chat | | | |
+|---------------------|-----------------|-----------|-----------|
+| **Creator (references username)** _string_ | **Room** _int_ | **Message** _string_ | **Datetime** _string_ |
+
+| Room | | | |
+|---------------------|-----------------|-----------|-----------|
+| **Name** _string_ | **Description** _int_ | **Password** _string_ | **Owner (references username)** _string_ |
+
+
 ## ClientOperations Module
 
 The client relies on one main module called `ClientOperations`. This module is initialized, and its run method is called by a simple program `Client`, which is the program executed by a user to start the interface.
